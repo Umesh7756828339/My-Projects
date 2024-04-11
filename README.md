@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Grocery_Store_Web_App
  GROCERY STORE application is a Maven Project based on the Model-View-Controller (MVC) software design pattern to develop user interface application for customers to purchase groceries online. It is secure, cashless, restful ecommerce website which is used to order the groceries online by customers and get products on the door within few hours.
 
@@ -38,3 +39,8 @@ Admin Role Flow :- 1) By default one admin has been created
 Security :- Spring security Jwt Token has been used for authentication and give authorization access to the api according to their role(User/Admin)
 
 Payment  :- RazorPay payment gateway has been used for online payment 
+=======
+# My-Projects
+This is my first  repossitory
+Author- Umesh Desale
+>>>>>>> e83c646e1bc7628b69ce31da83c58b720665a388
