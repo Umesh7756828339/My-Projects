@@ -1,0 +1,53 @@
+.banner2 {
+    background-image: url(/assets/banner9.jpg);
+    height: 100vh;
+    box-shadow: 0px 5px 70px rgba(0, 0, 0, 0.5);
+}
+.container .row .col-lg-3 {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container .row .col-lg-3:hover {
+    cursor: pointer;
+    transform: scale(1.06);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+.input-icons i {
+    position: absolute;
+}
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.icon {
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 9px;
+    text-align: center;
+    border-radius: 10px;
+    border-color: rgb(0, 0, 0);
+}
+
+.input-field:focus {
+    outline: none !important;
+    border-color: #000000;
+    box-shadow: 0 0 5px #000000;
+}
+
+
+.button-container button {
+    flex: 1;
+    margin-right: 11px;
+}
+
+.class-desp {
+    font-size: 12px;
+}
+

@@ -1,0 +1,54 @@
+<div class="container mt-4">
+    <div class="row">
+       
+        <div class="col-md-12 text-center mb-3">
+            <h2 style="margin-bottom: 5px;">{{ product.productName }}</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <!-- Right column for product image and information -->
+        <div class="col-md-6">
+            <div class="product-information text-center">
+                <div class="card image-container p-3">
+                    <img [src]="product.productImages[selectedProductIndex].url" class="product-zoom-image" alt="Product Image">
+                </div>
+            </div>
+        </div>
+        <!-- Left column for thumbnails -->
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <mat-grid-list style="cursor: pointer;" cols="3" gutterSize="10" rowHeight="1:1">
+                        <mat-grid-tile *ngFor="let file of product.productImages.slice(0, 3); let i=index" (click)="changeIndex(i)" style="border: 1px solid lightgrey;">
+                            <img [src]="file.url" alt="Thumbnail Image" height="180px">
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                    <div class="mt-2">
+                        <div class="d-flex justify-content-between">
+                            <h5>
+                                <span>Phone Price: <i class="bi bi-currency-rupee"></i>{{ product.productDiscountedPrice }}</span>
+                                <span style="margin-left: 5px; text-decoration: line-through;"><i class="bi bi-currency-rupee"></i>{{ product.productActualPrice }}</span>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <div class="d-flex justify-content-between">
+                            <h5>Description:</h5>
+                            <p>{{ product.productDescription }}</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-2"> 
+        <div class="col-md-6 text-center">
+            <div class="mt-2"> 
+                <button mat-raised-button color="black" style="width: 200px; background-color: black; color: white;" (click)="buyProduct(product.productId)">Buy Now</button>
+                &nbsp;
+                <button mat-raised-button style="width: 200px; background-color: yellow;" (click)="addToCart(product.productId)">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</div>

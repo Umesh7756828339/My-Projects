@@ -1,0 +1,14 @@
+.bgColor {
+    background-color: #f8f9fa; /* Light grey background color */
+}
+
+/* Mat-button-toggle hover effect */
+mat-button-toggle:hover {
+    background-color: yellow;
+}
+
+/* Button background color and text color */
+mat-raised-button {
+    background-color: black;
+    color: white;
+}

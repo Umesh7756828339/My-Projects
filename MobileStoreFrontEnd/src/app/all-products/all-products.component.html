@@ -1,0 +1,52 @@
+<div class="container text-center">
+  <div class="step mt-5">
+    <h1 class="mb-0">OUR ALL MOBILE PHONE'S</h1> 
+  </div>
+</div>
+
+<div class="container text-center mt-3"> 
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <div class="search_button">
+        <div class="input-icons">
+          <input class="input-field" matInput #searchkeyword (keyup)="searchByKeyword(searchkeyword.value)" ngModel
+            name="searchKey" id="searchKey" placeholder="Search any product">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 mb-4" *ngFor="let p of productDetails">
+      <div class="row p-2" (click)="showProductDetails(p.productId)">
+        <div class="image-container">
+          <img class=".home-page-product-image" height="185px" width="250px" [src]="p.productImages[0].url" alt="">
+        </div>
+        <div>
+          <p><b style="font-family: 'Times New Roman', Times, serif;">{{p.productName}}</b></p>
+        </div>
+        <div class="class-desp" style="height: 40px; overflow: hidden;">
+          <p>{{p.productDescription}}</p>
+        </div>
+        <div>
+          <b><i class="bi bi-currency-rupee"></i>{{p.productDiscountedPrice}} </b> &nbsp;&nbsp;<b style="text-decoration:line-through">{{p.productActualPrice}}</b>
+        </div>
+
+        <div class="mt-2 button-container">
+          <button type="button" mat-raised-button style="background-color: black; color: white; font-size: 14px; margin-left: 5px;"(click)="showProductDetails(p.productId)"><span>View Details</span></button>
+          <button type="button" mat-raised-button style="background-color: lightblue; color: black; font-size: 14px; margin-left: 5px;" (click)="addToCart(p.productId)"><span>Add To Cart</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center mt-5" style="padding-bottom: 100px;" *ngIf="showLoadButton">
+  <button type="button" mat-raised-button style="background-color: yellow; color: black;" (click)="loadMoreProduct()">Next Page</button>
+</div>
+
+<div style="margin-top: 20px;">
+  <app-footer></app-footer>
+</div>

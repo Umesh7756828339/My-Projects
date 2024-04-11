@@ -1,0 +1,27 @@
+/* Product name at the top center with reduced margin */
+h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    font-weight: bold;
+    margin-top: 0; /* Reducing top margin */
+    margin-bottom: 5px; /* Reducing bottom margin */
+}
+
+/* Reduced margin for the button container */
+.mt-2 {
+    margin-top: 5px; /* Adjust as needed */
+}
+
+/* Styling for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light grey background color */
+    color: #333; /* Text color */
+}
+
+.container {
+    background-color: white; /* Container background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    padding: 20px; /* Padding inside the container */
+}
