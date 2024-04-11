@@ -1,0 +1,41 @@
+
+
+.btn-remove-image
+{
+    position: absolute;
+    cursor: pointer;
+    top: -5px;
+    right: -10px;
+    color: darkblue;
+    width: 15px;
+    height: auto;
+    text-align: center;
+}
+
+.dropzone
+{
+    height: 150px;
+    min-width: 100px;
+    display: table;
+    background-color: aliceblue;
+    width: 380px;
+    border: dashed 1px blue;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-wrapper
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+.centered
+{
+    text-align: center;
+}
+.browse-button
+{
+    color: blue;
+    cursor: pointer;
+}

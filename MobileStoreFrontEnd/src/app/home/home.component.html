@@ -1,0 +1,88 @@
+<div class="bootstrap-wrapper bgColor">
+  <div class="banner2">
+    <div class="bannerContent">
+      <h1>
+        Discover the Latest Deals<br> Exciting Offers!"<br> On Mobiles
+      </h1>
+      <button type="button" mat-raised-button color="#F8F8FF" class="btn navbar-bg-second" routerLink="/allproducts">
+        SHOP NOW <i class="bi bi-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+  <div class="container bgColor mt-3">
+    <div class="step">
+      <h1 class="mb-3 text-center" style="margin-top: 50px;">OUR SPECIALTIES</h1>
+      <div class="row" style="margin-top: 50px;">
+        <!--One-->
+        <div class="col-lg-4 mb-4">
+          <div class="stepBox">
+            <div class="mt-2 text-center">
+              <img src="../../assets/Specialties/card1.png" height="140px">
+              <h5 class="mt-2">Top Brands</h5>
+              <p>Explore our collection of top brands, featuring industry leaders such as Apple, Samsung, Sony, and more. design, performance.</p>
+            </div>
+          </div>
+        </div>
+        <!--two-->
+        <div class="col-lg-4 mb-4">
+          <div class="stepBox">
+            <div class="mt-2 text-center">
+              <img src="../../assets/Specialties/card2.png" height="140px">
+              <h5 class="mt-2">Exclusive Offers</h5>
+              <p>Limited-time discounts on flagship models. Bundle deals with accessories for added value. Loyalty rewards program for repeat customers.</p>
+            </div>
+          </div>
+        </div>
+        <!--Three-->
+        <div class="col-lg-4 mb-4">
+          <div class="stepBox">
+            <div class="mt-2 text-center">
+              <img src="../../assets/Specialties/card3.png" height="140px">
+              <h5 class="mt-2">Customer Services</h5>
+              <p>Fast and free shipping across all orders. Hassle-free returns and exchanges policy. 24/7 customer support for any queries or assistance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-5 text-center">
+    <h1 class="mb-3">OUR PRODUCTS</h1>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="search_button">
+          <div class="input-icons">
+            <i class="bi bi-search icon"></i>
+            <input class="input-field" matInput #searchkeyword (keyup)="searchByKeyword(searchkeyword.value)" ngModel name="searchKey" id="searchKey" placeholder="Search any product">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-3 mb-4" *ngFor="let p of productDetails">
+        <div class="row p-2" (click)="showProductDetails(p.productId)">
+          <div class="image-container">
+            <img class=".home-page-product-image" height="180px" width="250px" [src]="p.productImages[0].url" alt="">
+          </div>
+          <div>
+            <p><b style="font-family: 'Times New Roman', Times, serif;">{{p.productName}}</b></p>
+          </div>
+          <div class="class-desp">
+            <p style="white-space: inherit; height:30px; width: 250px; overflow: hidden; text-overflow:  ellipsis;">{{p.productDescription}}</p>
+          </div>
+          <div>
+            <b><i class="bi bi-currency-rupee"></i>{{p.productDiscountedPrice}} </b> &nbsp;&nbsp;<b style="text-decoration:line-through">{{p.productActualPrice}}</b>
+          </div>
+          <div class="mt-2">
+            <button type="button" mat-raised-button class="black-button" style="font-size: 14px;" (click)="showProductDetails(p.productId)">View Details</button>
+            <button type="button" mat-raised-button style="background-color: lightblue; color: black; font-size: 14px; margin-left: 5px;" (click)="addToCart(p.productId)">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-5">
+      <button type="button" mat-raised-button style="background-color: yellow; color: black;" routerLink="/allproducts">View All Products</button>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
