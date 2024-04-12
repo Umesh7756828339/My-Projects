@@ -1,15 +1,15 @@
 <<<<<<< HEAD
-# Grocery_Store_Web_App
- GROCERY STORE application is a Maven Project based on the Model-View-Controller (MVC) software design pattern to develop user interface application for customers to purchase groceries online. It is secure, cashless, restful ecommerce website which is used to order the groceries online by customers and get products on the door within few hours.
+# Mobile_Store_Web_App
+Mobile STORE application is a Maven Project based on the Model-View-Controller (MVC) software design pattern to develop user interface application for customers to purchase Mobile online. It is secure, cashless, restful ecommerce website which is used to order the Mobile online by customers and get products on the door within few days.
 
  Technologies used: Frontend: Angular , Bootstrap
                    Backend : Spring Boot , Hibernate
                    Database: MySql
 
 FrontEnd Description:
-                  Headers:  For All ( Home, All Products, Grocery List, About us)
-                            For User/Customer ( Home, All Products, Grocery List, About us, Cart, My Orders)
-                            For Admin ( Home, All Products, Grocery List, About us, Add Products, Product Details, All Orders, All Users)
+                  Headers:  For All ( Home, All Products, Brand's List, About us)
+                            For User/Customer ( Home, All Products, Brand's List, About us, Cart, My Orders)
+                            For Admin ( Home, All Products, Brand's  List, About us, Add Products, Product Details, All Orders, All Users)
 
 Backend Description: 
                   Modules:  Role, User, Admin, Product, Order, Cart, ImageModel, TransactionDetails
